@@ -1,0 +1,12 @@
+.HomePage{
+    width:100%;
+  max-height: 550px;
+  overflow-y: scroll;
+    .beerCard{
+        display: grid;
+        grid-template-columns: repeat(3,35.3%);
+    margin-left: 50px;
+    grid-row-gap: 10px;
+
+    }
+}
