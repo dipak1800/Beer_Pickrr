@@ -1,0 +1,29 @@
+.scrollToTop {
+    position: fixed;
+    right: 16px;
+    bottom: 10px;
+    width: 45px;
+    height: 45px;
+    border: none!important;
+    border-radius: 50%;
+    background:#0d3b66;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    outline: none !important;
+    cursor: pointer;
+
+  
+  }
+  #scrollToTop:active {
+    background: rgba(51, 102, 255, 1);
+    outline: none !important;
+  }
+  .rocket{
+    font-size: 28px;
+    &:hover{
+      color: orangered;
+    }
+  }
+  .hideScrollToTopButton{
+    display: none;
+  }

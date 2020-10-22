@@ -2,24 +2,30 @@
     width: 100%;
     .BeerForm{
         display: flex;
-    width: 90%;
+    width: 89%;
     justify-content: space-between;
     align-items: center;
-    margin:15px auto; 
+    margin:12px auto; 
+
     }
 
 }
 .customInput{
-    width: 90%;
+    width: 92%;
 border: 1px solid #f95738!important;
 outline: none!important;
    
 }
 .customButton{
-    width: 8%;
-    margin-bottom: 14px;
+    width: 7.99%;
+    margin-bottom: 17px;
     background-color: #0d3b66!important;
     color: whitesmoke!important;
+    border-radius: 0!important;
+    padding: 6.8px 0px!important;
+    border-bottom-right-radius: 5px!important;
+    border-top-right-radius: 5px!important;
+
   
 }
 input:focus{
@@ -31,4 +37,25 @@ input:focus{
 }
 .customButton:hover{
     color: orangered!important;
+}
+.customButton2{
+    width: 7.99%;
+    margin-bottom: 17px;
+    background-color: red!important;
+    color: whitesmoke!important;
+    border-radius: 0!important;
+    padding: 6.8px 0px!important;
+    border-bottom-right-radius: 5px!important;
+    border-top-right-radius: 5px!important;
+    &:hover{
+        color: black!important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .customButton{
+    display: none !important;
+    }
+    .customInput{
+        width: 100% !important;
+    }
 }

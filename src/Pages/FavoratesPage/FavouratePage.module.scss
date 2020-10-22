@@ -1,0 +1,108 @@
+.container{
+    width:100%;
+    height: 81vh;
+
+    .favourates{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+        font-family: fantasy;
+      
+    }
+}
+.love{
+animation: loveBlink 9s ease-in-out 1s infinite alternate-reverse ;
+margin-left: 5px;
+}
+@keyframes loveBlink{
+    0%{
+        color:white ;
+
+    };
+    10%{
+        color:orangered ;
+
+    };
+    20%{
+        color:white ;
+    };
+    30%{
+        color:orangered ;
+    
+
+    };
+    40%{
+        color:white ;
+        
+    };
+    50%{
+        color: orangered;
+
+    };
+    60%{
+        color:white ;
+      
+
+
+    };
+    70%{
+        color:orangered ;
+     
+
+
+    };
+    80%{
+
+        color:white ;
+    };
+    90%{
+        color:orangered ;
+
+    };
+    100%{
+        color:white ;
+
+    };
+
+}
+.subContainer{
+    width: 100%;
+    height: 100%;
+    
+    .noBeers{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 3px;
+        font-weight: 400;
+
+    }
+}
+
+.gridSubContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,48%);
+    grid-gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+@media only screen and (max-width: 600px) {
+    .gridSubContainer{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,98%);
+        grid-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

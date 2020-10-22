@@ -6,15 +6,20 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from 'react-redux';
-import GlobalStore from './Redux/Store/GlobalStore'
+import GlobalStore, { persistor } from './Redux/Store/GlobalStore'
+import { PersistGate } from 'redux-persist/integration/react'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Provider store={GlobalStore}>
-        <App />
-      </Provider>
-    </Router>
+
+    <Provider store={GlobalStore}>
+      <Router>
+        <PersistGate persistor={persistor}>
+          <App />
+        </PersistGate>
+      </Router>
+    </Provider>
+
 
   </React.StrictMode>,
   document.getElementById('root')

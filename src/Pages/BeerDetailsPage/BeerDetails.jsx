@@ -5,22 +5,27 @@ import getBeerDetails from '../../Redux/Actions/ActionsCreators/BeerDetailsActio
 import Style from './BeerDetails.module.scss'
 function BeerDetails(props) {
     const { id } = props.match.params;
-    console.log(id);
+    // console.log(id);
     const Beer = useSelector(state => state.BeerDetailsReducer.Beer);
+    const loading = useSelector(state => state.BeerDetailsReducer.loading);
     const dispatch = useDispatch()
 
     useEffect(() => {
 
         dispatch(getBeerDetails(id))
     }, [])
-    console.log(Beer[0]);
-
+    // console.log(loading);
     return (
         <div className={Style.BeerDetailPage}>
             {
-                Beer.length && Beer.map(beer => <Fragment key={beer.id}>
+                Beer.length > 0 && Beer.map(beer => <Fragment key={beer.id}>
                     <BeerDetailsCard beer={beer} />
                 </Fragment>)
+            }
+            {
+                loading && <h2 className={Style.Loading}>
+                    Loading...
+                </h2>
             }
         </div>
     )
